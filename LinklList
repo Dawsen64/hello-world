@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+//exit(OVERFLOW);
+#define SIZEMAX     //线性表初始分配量
+typedef int ElemType;  //假定Elemtype是int;
+
+//定义线性表：
+typedef struct {
+	ElemType *elem;//线性表的初始地址
+	int length;//线性表长度
+	int listsize;//给线性表分配的空间大小
+}; SqList;
+//线性表抽象数据类型的定义；
+void CreateList(SqList* L, ElemType a[], int n);
+void InitList(SqList *L);
+void DestroyList(SqList* L);
+void 
