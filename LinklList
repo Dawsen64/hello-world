@@ -1,8 +1,10 @@
 #include<stdio.h>
+#include<math.h>
 #include<stdlib.h>
 //exit(OVERFLOW);
 #define SIZEMAX     //线性表初始分配量
 typedef int ElemType;  //假定Elemtype是int;
+typedef int Stutas;
 
 //定义线性表：
 typedef struct {
@@ -10,8 +12,41 @@ typedef struct {
 	int length;//线性表长度
 	int listsize;//给线性表分配的空间大小
 }; SqList;
-//线性表抽象数据类型的定义；
-void CreateList(SqList* L, ElemType a[], int n);
-void InitList(SqList *L);
-void DestroyList(SqList* L);
-void 
+//线性表抽象数据类型的定义
+Stutas InitList(&L);
+void DestroyList(&L);
+void ClearList(&L);
+void ListEmpoty(L);
+void ListLength(L);
+void GetElem(L, i, &e);
+void LocateElem(L, e, compare();
+void PriorElem(L, cur_e, &pre_e);
+void NextElem(L, cur_e, &next_e);
+void ListInsert(&L, i, e);
+void ListDelete(&L, i, &e);
+void ListTraverse(L, visit());
+
+int main(void)
+{
+	return 0;
+}
+
+void InitList(SqList &L);//构造一个空的顺序表
+{
+	L.elem = (ElemType*)malloc(SIZEMAX * sizeof(ElemType));
+	if (L.elem == NULL)
+		exit(OVERFLOW);
+	L.length == 0;
+	L.listsize == SIZEMAX;
+	return OK;
+}
+
+
+
+
+
+
+int main(void)
+{
+	
+}
