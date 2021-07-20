@@ -20,3 +20,17 @@ x = Solution()
 nums = [0,1,2,2,3,0,4,2]
 k = 2
 print(x.removeElement(nums, k))
+
+##双指针
+
+class Solution:
+    def removeElement(self, nums: list[int], val: int) -> int:
+        left, right = 0, 0
+        while right < len(nums):
+            if nums[right] != val:
+                nums[left] = nums[right]
+                left += 1
+                right += 1
+            else:
+                right += 1
+        return left
