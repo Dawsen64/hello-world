@@ -11,3 +11,14 @@ class Solution:
             elif mid**2 > x:
                 right = mid -1
             else: left = mid + 1
+
+                
+                
+###牛顿迭代法
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        guess = x
+        while not(int(guess)**2 <= x and (guess+1)**2 > x):
+            guess = (guess + x/guess) / 2
+
+        return int(guess)
