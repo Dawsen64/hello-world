@@ -8,6 +8,31 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head)
+    {
+        ListNode* ptr1 = head;
+        head = nullptr;
+        ListNode* ptr2 =  nullptr;
+
+
+        while (ptr1)
+        {
+            ptr2 = ptr1->next;
+
+            ptr1->next = head;
+            head = ptr1;
+            ptr1 = ptr2;
+        }
+
+        return head;
+    }
+};
+
+
+
 //我自己写的，对于边缘没有处理好
 class Solution {
 public:
