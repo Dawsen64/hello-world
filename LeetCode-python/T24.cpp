@@ -8,6 +8,23 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+//递归 //参考 https://lyl0724.github.io/2020/01/25/1/
+class Solution {
+public:
+    ListNode* swapPairs(ListNode* head)
+    {
+        if (head == nullptr || head->next == nullptr)
+        {
+            return head;
+        }
+        ListNode* cur;
+        cur = head->next;
+        head->next = swapPairs(cur->next);
+        cur->next = head;
+        return cur;
+    }
+};
+
 //本人写的；
 class Solution {
 public:
