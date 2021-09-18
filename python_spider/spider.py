@@ -191,4 +191,3 @@ if __name__ == "__main__":          #当程序执行时
     main()
     #init_db("movietest.db")
     print("爬取完毕！")
-    print("感谢使用此脚本，有问题请联系zqiusen@qq.com。")
