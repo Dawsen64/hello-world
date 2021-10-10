@@ -1,0 +1,5 @@
+n, x, y = input().split()
+n=float(n)
+x=float(x)
+y=float(y)
+print(n/x*y-n)
